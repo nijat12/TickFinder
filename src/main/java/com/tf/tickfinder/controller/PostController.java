@@ -24,7 +24,7 @@ public class PostController {
 		return new PostFacade().find(id);
 	}
 
-	@RequestMapping(path = "api/post/{id}", method = RequestMethod.DELETE)
+	@RequestMapping(path = "/api/post/delete/{id}", method = RequestMethod.POST)
 	public Response deletePost(@PathVariable long id) {
 		return new PostFacade().delete(id);
 	}

@@ -21,7 +21,7 @@ public class Post {
 	private int polarity;
 
 	@Column(name = "score", nullable = false)
-	private int score;
+	private float score;
 
 	public Post() {
 
@@ -51,11 +51,11 @@ public class Post {
 		this.polarity = polarity;
 	}
 
-	public int getScore() {
+	public float getScore() {
 		return score;
 	}
 
-	public void setScore(int score) {
+	public void setScore(float score) {
 		this.score = score;
 	}
 

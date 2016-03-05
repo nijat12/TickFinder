@@ -46,7 +46,7 @@ public class ContactController {
 		return new ContactFacade().update(contact);
 	}
 
-	@RequestMapping(path = "/api/contact/{id}", method = RequestMethod.DELETE)
+	@RequestMapping(path = "/api/contact/delete/{id}", method = RequestMethod.POST)
 	public Response deleteContact(@PathVariable long id) {
 		return new ContactFacade().delete(id);
 	}

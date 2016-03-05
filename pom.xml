@@ -131,6 +131,20 @@
 			<scope>test</scope>
 		</dependency>
 
+		<!-- jInstagram -->
+		<dependency>
+			<groupId>com.sachinhandiekar</groupId>
+			<artifactId>jInstagram</artifactId>
+			<version>1.1.6</version>
+		</dependency>
+
+		<!-- Facebook4J -->
+		<dependency>
+			<groupId>org.facebook4j</groupId>
+			<artifactId>facebook4j-core</artifactId>
+			<version>[2.4,)</version>
+		</dependency>
+
 		<!-- Jackson JSON Mapper -->
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
