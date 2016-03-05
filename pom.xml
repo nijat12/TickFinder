@@ -131,6 +131,13 @@
 			<scope>test</scope>
 		</dependency>
 
+		<!-- javax WS -->
+		<dependency>
+			<groupId>javax.ws.rs</groupId>
+			<artifactId>javax.ws.rs-api</artifactId>
+			<version>2.0</version>
+		</dependency>
+
 		<!-- jInstagram -->
 		<dependency>
 			<groupId>com.sachinhandiekar</groupId>

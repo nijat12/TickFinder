@@ -14,6 +14,11 @@ import com.tf.tickfinder.web.Response;
 @RestController
 public class PostController {
 
+	@RequestMapping(path = "/api/post", method = RequestMethod.OPTIONS)
+	public javax.ws.rs.core.Response getOptions() {
+		return javax.ws.rs.core.Response.ok().header("Access-Control-Allow-Origin", "*").header("Access-Control-Allow-Methods", "POST, GET, PUT, UPDATE, OPTIONS").header("Access-Control-Allow-Headers", "Content-Type, Accept, X-Requested-With").build();
+	}
+
 	@RequestMapping(path = "/api/post", method = RequestMethod.GET)
 	public List<Post> getAllPosts() {
 		return new PostFacade().findAll();
