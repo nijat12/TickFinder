@@ -14,14 +14,14 @@ public class Post {
 	@GeneratedValue
 	private long id;
 
-	@Column(name = "source", nullable=false)
+	@Column(name = "source", nullable = false)
 	private String source;
 
-	@Column(name = "polarity", nullable=false)
+	@Column(name = "polarity", nullable = false)
 	private int polarity;
 
-	@Column(name = "content")
-	private String content;
+	@Column(name = "score", nullable = false)
+	private int score;
 
 	public Post() {
 
@@ -51,12 +51,12 @@ public class Post {
 		this.polarity = polarity;
 	}
 
-	public String getContent() {
-		return content;
+	public int getScore() {
+		return score;
 	}
 
-	public void setContent(String content) {
-		this.content = content;
+	public void setScore(int score) {
+		this.score = score;
 	}
 
 }
