@@ -12,8 +12,8 @@ import com.tf.tickfinder.web.Response;
 public class QueryController {
 
 	@RequestMapping(path = "api/classify", params = "url", method = RequestMethod.GET)
-	public Response getClassification(@RequestParam String url) {
-		return new Response(new PostSentimentFacade().find(url));
+	public Response getClassificationByURL(@RequestParam String url) {
+		return new Response(new PostSentimentFacade().findByUrl(url));
 	}
 
 }

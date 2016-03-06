@@ -13,12 +13,23 @@ public class PostSentimentFacade extends ExternalAbstractFacade<PostSentiment> {
 
 	@Override
 	protected String getAddress() {
-		return ResourceAddress.QUERY_URL;
+		return ResourceAddress.URL_QUERY_URL;
 	}
 
-	public PostSentiment find(String targetUrl) {
+	public PostSentiment findByText(String text) {
 		try {
-			PostSentiment sentiment = find(new URL(getAddress() + targetUrl));
+			PostSentiment sentiment = find(new URL(ResourceAddress.TEXT_QUERY_URL + text));
+			return sentiment;
+		}
+		catch (MalformedURLException e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+
+	public PostSentiment findByUrl(String targetUrl) {
+		try {
+			PostSentiment sentiment = find(new URL(ResourceAddress.URL_QUERY_URL + targetUrl));
 			return sentiment;
 		}
 		catch (MalformedURLException e) {
