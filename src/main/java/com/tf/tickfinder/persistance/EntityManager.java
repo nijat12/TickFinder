@@ -72,5 +72,9 @@ public class EntityManager<T> {
 		session.close();
 		return new Response("OK");
 	}
+	
+	public Session openSession(){
+		return factory.openSession();
+	}
 
 }

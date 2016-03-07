@@ -17,10 +17,11 @@ public class SearchFacade extends ExternalAbstractFacade<Search> {
 		return FacebookQuery.SEARCH_QUERY + FacebookQuery.ACCESS_TOKEN;
 	}
 
-	public Search find() {
+	public Search find(String query) {
 		try {
-			Search search = find(new URL(getAddress()));
-			return search;
+			String address = FacebookQuery.BASE_URL + "/search?q=" + query + "&type=page&access_token=" + FacebookQuery.ACCESS_TOKEN;
+			address = address.replace(" ", "");
+			return find(new URL(address));
 		}
 		catch (MalformedURLException e) {
 			e.printStackTrace();

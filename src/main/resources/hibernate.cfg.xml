@@ -27,6 +27,7 @@
 
 		<mapping class="com.tf.tickfinder.model.Post" />
 		<mapping class="com.tf.tickfinder.model.Contact" />
+		<mapping class="com.tf.tickfinder.model.Tag" />
 
 	</session-factory>
 </hibernate-configuration>

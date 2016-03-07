@@ -19,7 +19,7 @@ public class FeedFacade extends ExternalAbstractFacade<Feed> {
 
 	public Feed find(String feedId) {
 		try {
-			Feed feed = find(new URL(getAddress() + "/" + feedId + "/feed?access_token=" + FacebookQuery.ACCESS_TOKEN));
+			Feed feed = find(new URL(getAddress() + "/" + feedId + "/feed?access_token=" + FacebookQuery.ACCESS_TOKEN + "&fields=picture,message,created_time"));
 			return feed;
 		}
 		catch (MalformedURLException e) {

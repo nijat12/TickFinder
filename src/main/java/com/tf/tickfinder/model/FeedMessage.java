@@ -7,6 +7,14 @@ public class FeedMessage {
 	private String id;
 	@JsonProperty(value = "created_time")
 	private String createdTime;
+	private String picture;
+
+	public FeedMessage() {
+		message = "";
+		id = "";
+		createdTime = "";
+		picture = "";
+	}
 
 	public String getMessage() {
 		return message;
@@ -30,6 +38,14 @@ public class FeedMessage {
 
 	public void setCreatedTime(String createdTime) {
 		this.createdTime = createdTime;
+	}
+
+	public String getPicture() {
+		return picture;
+	}
+
+	public void setPicture(String picture) {
+		this.picture = picture;
 	}
 
 }

@@ -23,8 +23,11 @@ public class Contact {
 	@Column(name = "phone")
 	private String phone;
 
-	@Column(name = "level")
-	private int level;
+	@Column(name = "critical")
+	private boolean critical;
+
+	@Column(name = "bad")
+	private boolean bad;
 
 	public Contact() {
 
@@ -62,12 +65,20 @@ public class Contact {
 		this.phone = phone;
 	}
 
-	public int getLevel() {
-		return level;
+	public boolean isCritical() {
+		return critical;
 	}
 
-	public void setLevel(int level) {
-		this.level = level;
+	public void setCritical(boolean critical) {
+		this.critical = critical;
+	}
+
+	public boolean isBad() {
+		return bad;
+	}
+
+	public void setBad(boolean bad) {
+		this.bad = bad;
 	}
 
 }

@@ -32,6 +32,9 @@ public class Post {
 	@Column(name = "created_time")
 	private String createdTime;
 
+	@Column(name = "picture")
+	private String picture;
+
 	public Post() {
 
 	}
@@ -90,6 +93,14 @@ public class Post {
 
 	public void setCreatedTime(String createdTime) {
 		this.createdTime = createdTime;
+	}
+
+	public String getPicture() {
+		return picture;
+	}
+
+	public void setPicture(String picture) {
+		this.picture = picture;
 	}
 
 }
