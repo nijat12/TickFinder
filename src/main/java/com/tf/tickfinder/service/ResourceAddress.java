@@ -8,7 +8,7 @@ public class ResourceAddress {
 
 	public static final String URL_QUERY_URL = "http://gateway-a.watsonplatform.net/calls/url/URLGetTextSentiment?apikey=7fedf6f0bdb2a635cb07dbc3ef67670be3828dc2&outputMode=json&url=";
 
-	public static final String TEXT_QUERY_URL = "http://gateway-a.watsonplatform.net/calls/url/TextGetTextSentiment?apikey=8704052997ec18c590fad39d45418214176ae415&outputMode=json&text=";
+	public static final String TEXT_QUERY_URL = "http://gateway-a.watsonplatform.net/calls/text/TextGetTextSentiment?apikey=7fedf6f0bdb2a635cb07dbc3ef67670be3828dc2&outputMode=json&text=";
 	
 	private ResourceAddress() {
 

@@ -4,6 +4,8 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
 
 import com.tf.tickfinder.model.Feed;
 import com.tf.tickfinder.model.FeedMessage;
@@ -40,13 +42,22 @@ public class FacebookPostSearcher {
 
 						for (FeedMessage message : feed.getData()) {
 							String url = "http://www.facebook.com/" + message.getId();
-							PostSentiment sentiment = new PostSentimentFacade().findByUrl(url);
+							PostSentiment sentiment = null;
+							try {
+								sentiment = new PostSentimentFacade().findByText(URLEncoder.encode(message.getMessage(), "UTF-8"));
+								sentiment.setUrl(url);
+							}
+							catch (UnsupportedEncodingException e1) {
+								e1.printStackTrace();
+							}
 
 							try {
 								if (sentiment != null) {
-									Post post = buildPost(data, message, sentiment);
-									new PostFacade().create(post);
-									System.out.println("Added post");
+									if (!data.getName().equals("Miami-Dade Animal Services")) {
+										Post post = buildPost(data, message, sentiment);
+										new PostFacade().create(post);
+										System.out.println("Added post");
+									}
 								}
 							}
 							catch (NullPointerException e) {

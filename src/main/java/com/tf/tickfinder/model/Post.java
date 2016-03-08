@@ -14,13 +14,13 @@ public class Post {
 	@GeneratedValue
 	private long id;
 
-	@Column(name = "source", nullable = false)
+	@Column(name = "source")
 	private String source;
 
-	@Column(name = "polarity", nullable = false)
+	@Column(name = "polarity")
 	private int polarity;
 
-	@Column(name = "score", nullable = false)
+	@Column(name = "score")
 	private float score;
 
 	@Column(name = "content")
